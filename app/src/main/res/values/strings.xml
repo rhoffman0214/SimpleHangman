@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SimpleHangman</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="new_game_button">New Game</string>
+    <string name="new_game_content">New Game\nContent</string>
+</resources>
