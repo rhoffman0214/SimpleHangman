@@ -2,7 +2,9 @@
     <string name="app_name">SimpleHangman</string>
 
     <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="new_game_button">New Game</string>
+    <string name="dummy_content">Simple\nHangman</string>
+    <string name="easyGameButton">Easy Game</string>
+    <string name="mediumGameButton">Medium Game</string>
+    <string name="hardGameButton">Hard Game</string>
     <string name="new_game_content">New Game\nContent</string>
 </resources>

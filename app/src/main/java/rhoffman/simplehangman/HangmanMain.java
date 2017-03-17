@@ -1,6 +1,7 @@
 package rhoffman.simplehangman;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ public class HangmanMain extends AppCompatActivity {
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
      */
-    private static final boolean AUTO_HIDE = true;
+    private static final boolean AUTO_HIDE = false;
 
     /**
      * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
@@ -65,7 +66,7 @@ public class HangmanMain extends AppCompatActivity {
     private final Runnable mHideRunnable = new Runnable() {
         @Override
         public void run() {
-            hide();
+            show();
         }
     };
     /**
@@ -102,10 +103,18 @@ public class HangmanMain extends AppCompatActivity {
             }
         });
 
+
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        //findViewById(R.id.easyGameButton).setOnTouchListener(mDelayHideTouchListener);
+    }
+
+    public void easyGameClick(View view)
+    {
+        Intent intent = new Intent(this, ActivityHangmanGame.class);
+        intent.putExtra("difficulty", "easy");
+        startActivity(intent);
     }
 
     @Override
@@ -115,7 +124,7 @@ public class HangmanMain extends AppCompatActivity {
         // Trigger the initial hide() shortly after the activity has been
         // created, to briefly hint to the user that UI controls
         // are available.
-        delayedHide(100);
+        //delayedHide(100);
     }
 
     private void toggle() {
@@ -160,4 +169,5 @@ public class HangmanMain extends AppCompatActivity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+
 }

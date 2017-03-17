@@ -1,7 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="#0099cc"
     tools:context="rhoffman.simplehangman.HangmanMain">
 
@@ -37,12 +37,31 @@
             tools:ignore="UselessParent">
 
             <Button
-                android:id="@+id/new_game_button"
+                android:id="@+id/easyGameButton"
                 style="?metaButtonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/new_game_button" />
+                android:text="@string/easyGameButton"
+                android:onClick="easyGameClick"/>
+
+            <Button
+                android:id="@+id/mediumGameButton"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mediumGameButton"
+                android:onClick="mediumGameStart"/>
+
+            <Button
+                android:id="@+id/hardGameButton"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hardGameButton"
+                android:onClick="hardGameStart"/>
         </LinearLayout>
     </FrameLayout>
 
